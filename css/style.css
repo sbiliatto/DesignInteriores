@@ -11,17 +11,15 @@ body {
 
 header {
   background-color: #E8DCC5;
-  padding: 15px 0;
+  padding: 15px 0; 
   position: fixed;
-  width: 100%;
+  width: 100%; /* largura */
   top: 0;
 }
 
 header div {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 30px; /* Espaço entre os elementos */
 }
 
 header img {
@@ -29,10 +27,11 @@ header img {
 }
 
 header a {
+  gap: 30px;
   font-weight: bold;
-  cursor: pointer;
   text-decoration: none;
   color: #333;
+  margin-bottom: 30px;
 }
 
 header a:hover {
@@ -60,11 +59,10 @@ h1 {
 button {
   background-color: #D9A273;
   color: white;
-  border: none;
+  border: none; 
   padding: 12px 25px;
   font-size: 16px;
   border-radius: 5px;
-  cursor: pointer;
   margin: 20px 0;
   font-family: 'Franklin Gothic Medium', Arial, sans-serif;
 }
@@ -87,7 +85,7 @@ button:hover {
 
 .comparacao img {
   width: 100%;
-  max-width: 400px;
+  max-width: 400px; 
   border-radius: 10px;
   margin: 10px 0;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -97,7 +95,7 @@ button:hover {
 .comparacao img:hover {
     max-width: 300px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
+    transform: scale(1.1); 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -105,12 +103,18 @@ button:hover {
     background-color: #f4f4f4;
     padding: 30px;
     margin-top: 10px;
+
+}
+
+.dica:hover {
+    color: #D9A273;
 }
 
 footer {
   background-color: #f4f4f4;
   padding: 20px;
   margin-top: 50px;
+  position: fixed;
 }
 
 form {
@@ -124,16 +128,15 @@ form {
 }
 
 form label {
-  display: block;
+  display: block;   /*ocupa a linha toda*/
   margin-bottom: 8px;
-  font-weight: bold;
+  font-weight: bold; 
   color: #333;
 }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
+form input {
+  width: 100%; 
+  padding: 10px; 
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -141,24 +144,93 @@ form textarea {
   font-family: 'Josefin Sans', Arial, sans-serif;
 }
 
-form input,
+
 form textarea {
-  outline: none;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Josefin Sans', Arial, sans-serif;
+}
+
+form input {
   border-color: #D9A273;
-  box-shadow: 0 0 5px #d9a2737e;
+  box-shadow: 0 0 5px #d9a2737e; 
+}
+
+
+form textarea {
+  border-color: #D9A273;
+  box-shadow: 0 0 5px #d9a2737e; 
 }
 
 form button {
   background-color: #D9A273;
   color: white;
-  border: none;
   padding: 12px 25px;
   font-size: 16px;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 form button:hover {
   background-color: #c58f5e;
 }
 
+main section h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.interiores {
+  background-color: #fff7ed;
+  padding: 30px; 
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  animation: corMudando 2s infinite;
+}
+
+.interiores h2 {
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.interiores p {
+  font-size: 18px;
+  margin-bottom: 15px; 
+}
+
+.interiores p strong {
+  color: #c58f5e;
+  font-weight: bold;
+  display: block; /* ocupa toda a largura disponível */
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.galeria {
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.galeria img {
+  width: 200px;
+  height: 200px;
+  animation: fade-in 2s; 
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes corMudando {
+  0% { background-color: #e8dcc5; }
+  50% { background-color: #fffbf7; }
+  100% { background-color: #e8dcc5; }
+}
